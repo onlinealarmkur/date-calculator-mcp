@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.onlinealarmkur/date-calculator-mcp",
+  "title": "Date Calculator",
+  "description": "Count days between dates, add or subtract dates, and look up public holidays by country.",
+  "version": "0.1.0",
+  "websiteUrl": "https://mcp.onlinealarmkur.com/",
+  "repository": {
+    "url": "https://github.com/onlinealarmkur/date-calculator-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://mcp.onlinealarmkur.com/icon-192.png",
+      "mimeType": "image/png",
+      "sizes": ["192x192"]
+    },
+    {
+      "src": "https://mcp.onlinealarmkur.com/icon-512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.onlinealarmkur.com/"
+    }
+  ]
+}
