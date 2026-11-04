@@ -13,14 +13,16 @@ This repository contains documentation and registration metadata for the hosted 
 
 | Tool | What it does |
 | --- | --- |
-| `count_days` | Count days between two dates, optionally excluding selected weekdays and public holidays. |
-| `shift_date` | Add or subtract years, months, weeks and days, with optional weekday and holiday exclusions. |
-| `get_holidays` | List public holidays, including observed dates, for a country and optional region, for up to 11 years per request. |
-| `list_locations` | Find supported countries, regions and available years. |
+| `count_days` | Count days between two dates: a plain difference, or business days with selected weekdays and public holidays excluded. Plain counts also give elapsed years, months and days. |
+| `shift_date` | Add or subtract years, months, weeks and days, with optional weekday and holiday exclusions. `roll` can move a plain date to the next or previous working day. |
+| `get_holidays` | List public holidays with their weekdays, including observed dates, for a country and optional region, for up to 11 years per request. |
+| `list_locations` | Without a country, get a compact list of supported countries and available years. With a country, get its exact region codes. |
 
-Dates use the Gregorian calendar in `YYYY-MM-DD` format, without a time of day. Weekends and holidays are included unless explicitly excluded.
+Dates use the Gregorian calendar in `YYYY-MM-DD` format, without a time of day. Weekends and holidays are included unless explicitly excluded. Some countries have a different weekend, so choose the weekdays for the country. Holidays count as full days; the data does not mark half-day holidays.
 
-Date calculation results include the rules used and a share link that opens the same calculation on the website. Calculation and holiday tools accept the website's 32 languages; holiday names may fall back to their native language.
+Without `region`, holiday calculations use the national calendar only, and the result includes a warning if the country has regions.
+
+Date calculation results include the weekday and ISO week of each date, any warnings, the rules used and a share link that opens the calculation on the website. A result that uses `roll` has a link to the plain calculation, because the website has no roll setting. Calculation and holiday tools accept the website's 32 languages; holiday names may fall back to their native language.
 
 ## Connect
 
