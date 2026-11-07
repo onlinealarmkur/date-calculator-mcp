@@ -1,0 +1,12 @@
+
+{
+  "name": "date-calculator-mcp",
+  "version": "0.2.0",
+  "description": "MCP server for calculating date differences, counting working days, shifting dates, and looking up public holidays by country or region.",
+  "mcpServers": {
+    "date-calculator": {
+      "httpUrl": "https://mcp.onlinealarmkur.com/"
+    }
+  }
+}
+
